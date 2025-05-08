@@ -1,70 +1,93 @@
-🔐 Secure Data Encryption System
-A simple yet powerful Streamlit-based app that allows users to securely register, login, encrypt, and retrieve sensitive personal data using industry-standard encryption (Fernet, PBKDF2). The app emphasizes data privacy, authentication, and a clean user experience.
+# 🔐 Secure Data Encryption System
 
-🚀 Features
-🔏 User Registration & Login
-Securely register with a username and password. Passwords are hashed using PBKDF2_HMAC.
+A **Streamlit-based secure vault** application that allows users to register, log in, and **encrypt/decrypt sensitive data** using hashed passwords and symmetric encryption (Fernet).
 
-🧠 User Authentication
-Prevent brute force with limited login attempts and salt-based hashing.
+---
 
-🧊 Data Encryption & Decryption
-Sensitive data is encrypted using Fernet (symmetric encryption).
+## 📁 Project Structure
 
-🗃 Persistent Storage
-Encrypted data is stored in a local JSON file (user_data.json).
-
-🎨 Beautiful Streamlit UI
-Includes navigation, and a clean sidebar.
-
-🛠️ Tech Stack
-Tool	Purpose
-Python	Core backend logic
-Streamlit	Web app UI
-Cryptography	Secure encryption (Fernet)
-Hashlib	Password hashing (PBKDF2_HMAC)
-JSON	Lightweight local storage
-
-📂 Project Structure
-bash
-Copy code
 secure_data_encryption_system/
 │
-├── encrypt_decrypt.py        # Core backend logic (Vault & User classes)
-├── main.py                   # Streamlit app entry point
-├── user_data.json            # Encrypted user data storage
-├── .venv/                    # Virtual environment (recommended)
-└── README.md                 # Project documentation
-🧪 How to Run
-Clone the repository
+├── encrypt_decrypt.py # Core backend logic (vault + user account)
+├── main.py # Streamlit frontend UI
+├── user_data.json # File to store hashed keys and encrypted data
+└── README.md # This file
 
-bash
+yaml
 Copy code
-git clone https://github.com/your-username/secure-data-encryption-system.git
-cd secure-data-encryption-system
-Set up a virtual environment (optional but recommended)
 
-bash
-Copy code
-python -m venv .venv
-source .venv/bin/activate      # On macOS/Linux
-.venv\Scripts\activate         # On Windows
-Install dependencies
+---
 
-bash
-Copy code
+## 🚀 Features
+
+- ✅ **User Registration & Login**  
+- ✅ **Password Hashing with Salt (using PBKDF2 + SHA256)**  
+- ✅ **Fernet-based Symmetric Encryption**  
+- ✅ **Stores Encrypted Data in JSON**  
+- ✅ **Attempt Limit for Login Security**  
+- ✅ **Streamlit UI with Pages: Home, Register, Login, Store, Retrieve, Logout**  
+
+
+---
+
+## 📦 Dependencies
+
+Install all requirements with:
+
+```bash
 pip install -r requirements.txt
-Run the Streamlit app
+requirements.txt
+txt
+Copy code
+streamlit
+cryptography
+🛠️ How to Run
+Clone the repository or download the code.
+
+Open a terminal in the project folder.
+
+Run the Streamlit app:
 
 bash
 Copy code
 streamlit run main.py
-.
+🔑 Usage Instructions
+Register:
+Go to the "Register" page, choose a unique username and strong password.
 
-This project is for educational/demo use. For production-level apps, consider database storage, key vaults, and secure authentication layers.
+Login:
+Use your credentials on the "Login" page.
 
-🙌 Author
-Khadija – Junior Frontend Developer & Graphic Designer
+Store Data:
+After logging in, go to "Store Data", enter your credentials again, and securely store sensitive information.
 
-Empowering users to protect their data, one key at a time.
+Retrieve Data:
+Go to "Retrieve Data" to view your decrypted content after entering credentials.
+
+Logout:
+Securely log out of the session using the "Logout" option.
+
+
+Clean sidebar navigation.
+
+📌 Security Notes
+Passwords are never stored directly, only hashed using salted PBKDF2.
+
+Data is encrypted using Fernet with a unique session key.
+
+JSON file stores user data but does not expose raw passwords or plaintext data.
+
+🧑‍💻 Author
+Khadija — Junior Frontend Developer | Python Enthusiast | Building real-world apps!
+
+📬 Feedback
+Feel free to reach out or fork this project to extend it! You can add:
+
+Email-based recovery
+
+Database integration (SQLite, MongoDB)
+
+Multi-user sessions
+
+UI improvements with animations
 
