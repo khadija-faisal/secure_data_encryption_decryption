@@ -1,10 +1,15 @@
 # 🔐 Secure Data Encryption System
 
+
 A **Streamlit-based secure vault** application that allows users to register, log in, and **encrypt/decrypt sensitive data** using hashed passwords and symmetric encryption (Fernet).
 
 ---
 
+
 ## 📁 Project Structure
+
+---
+
 
 secure_data_encryption_system/
 │
@@ -13,8 +18,9 @@ secure_data_encryption_system/
 ├── user_data.json # File to store hashed keys and encrypted data
 └── README.md # This file
 
-yaml
-Copy code
+
+----
+
 
 ---
 
@@ -35,9 +41,25 @@ Copy code
 Install all requirements with:
 
 ```bash
-pip install -r requirements.txt
-requirements.txt
-txt
+🧪 How to Run
+Clone the repository
+
+bash
+Copy
+Edit
+git clone https://github.com/your-username/secure-data-encryption-system.git
+cd secure-data-encryption-system
+Set up a virtual environment (optional but recommended)
+
+bash
+Copy
+Edit
+python -m venv .venv
+source .venv/bin/activate      # On macOS/Linux
+.venv\Scripts\activate         # On Windows
+
+
+
 Copy code
 streamlit
 cryptography
@@ -53,7 +75,7 @@ Copy code
 streamlit run main.py
 🔑 Usage Instructions
 Register:
-Go to the "Register" page, choose a unique username and strong password.
+Go to the "Register" page, choose a unique username and a strong password.
 
 Login:
 Use your credentials on the "Login" page.
