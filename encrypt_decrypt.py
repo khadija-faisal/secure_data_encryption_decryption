@@ -1,6 +1,6 @@
 import hashlib
 import streamlit as st # type: ignore #
-from cryptography.fernet import Fernet # type: ignore
+from cryptography.fernet import Fernet 
 import json
 import os
 
